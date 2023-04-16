@@ -21,8 +21,8 @@ function checkFooterPosition() {
 
 $(function () {
     $("#navbar").fadeOut(0);
-    $navbar = $("#navbar").load("components/navbar.html");
-    $footer = $("#page-footer").load("components/footer.html");
+    $navbar = $("#navbar").load("src/components/navbar.html");
+    $footer = $("#page-footer").load("src/components/footer.html");
 
     $("#navbar").ready(function () {
         $("#navbar").fadeIn(1000);

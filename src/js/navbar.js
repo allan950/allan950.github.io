@@ -5,7 +5,7 @@ $(function () {
     
     //$footer = $("#page-footer").load("components/footer.html");
 
-    $("#page-footer").load("components/footer.html", function(res, status, xhr) {
+    $("#page-footer").load("src/components/footer.html", function(res, status, xhr) {
         if (status === "success") {
             if (document.body.clientHeight < window.innerHeight) {
                 $(".footer-container").css("position", "absolute");
@@ -36,5 +36,5 @@ function defineNavbarVisual() {
         $navComponent = "navbar.html";
     }
 
-    $navbar = $("#navbar").load("components/" + $navComponent);
+    $navbar = $("#navbar").load("src/components/" + $navComponent);
 }
