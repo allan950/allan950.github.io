@@ -1,0 +1,72 @@
+[
+    {
+        "name": "reactjs",
+        "percentage": 45,
+        "image": "icons/frameworks/React-icon.svg.png"
+    },
+    {
+        "name": "jquery",
+        "percentage": 50,
+        "image": "icons/frameworks/jquery.png"
+    },
+    {
+        "name": "meteorjs",
+        "percentage": 15,
+        "image": "icons/frameworks/meteor.svg"
+    },
+    {
+        "name": "nodejs",
+        "percentage": 20,
+        "image": "icons/frameworks/5968322.png"
+    },
+    {
+        "name": "asp.net",
+        "percentage": 10,
+        "image": "icons/frameworks/asp-net-logo.png"
+    },
+    {
+        "name": "angular",
+        "percentage": 50,
+        "image": "icons/frameworks/Angular_full_color_logo.svg.png"
+    },
+    {
+        "name": "bootstrap",
+        "percentage": 40,
+        "image": "icons/frameworks/Bootstrap_logo.svg.png"
+    },
+    {
+        "name": "vuejs",
+        "percentage": 30,
+        "image": "icons/frameworks/Vue.js_Logo_2.svg.png"
+    },
+    {
+        "name": "ruby on rails",
+        "percentage": 0,
+        "image": "icons/frameworks/Ruby_On_Rails_Logo.svg.png"
+    },
+    {
+        "name": "symfony",
+        "percentage": 35,
+        "image": "icons/frameworks/symfony-logo-AA34C8FC16-seeklogo.com.png"
+    },
+    {
+        "name": "django",
+        "percentage": 20,
+        "image": "icons/frameworks/Django_logo.png"
+    },
+    {
+        "name": "flutter",
+        "percentage": 25,
+        "image": "icons/frameworks/Google-flutter-logo.png"
+    },
+    {
+        "name": "next.js",
+        "percentage": 20,
+        "image": "icons/frameworks/nextjs-logo.png"
+    },
+    {
+        "name": "tailwind css",
+        "percentage": 20,
+        "image": "icons/frameworks/tailwind_css_logo.svg"
+    }
+]

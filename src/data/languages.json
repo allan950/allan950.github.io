@@ -1,0 +1,32 @@
+{
+    "list": [
+        {
+            "name": "html",
+            "percent": 90
+        },
+        {
+            "name": "css / scss",
+            "percent": 90
+        },
+        {
+            "name": "javascript",
+            "percent": 75
+        },
+        {
+            "name": "c# / c++",
+            "percent": 10
+        },
+        {
+            "name": "java",
+            "percent": 15
+        },
+        {
+            "name": "python",
+            "percent": 30
+        },
+        {
+            "name": "php",
+            "percent": 40
+        }
+    ]
+}

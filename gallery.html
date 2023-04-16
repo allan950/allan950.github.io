@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body style="/*overflow-y: hidden;*/">
+    <style>
+
+        body::-webkit-scrollbar {
+            width: 0;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
+
+        body {
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            scrollbar-width: none;  /* Firefox */
+            overflow: -moz-scrollbars-none;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            -moz-overflow-style: none;
+        }
+    </style>
+
+    <div id="navbar"></div>
+
+    <main>
+        <div class="gallery">
+            <div class="options">
+                <div class="display">
+                    <div class="section" data-project-type="web" disable>
+                        <div>
+                            <div>
+                                <h3>web development</h3>
+                            </div>
+                            <div class="preview">
+                                <div>
+                                    <div class="item">
+                                        <div class="empty">
+                                            <b>?</b>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="empty">
+                                            <b>?</b>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="empty">
+                                            <b>?</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="container">
+                                    <div class="project-description">
+                                        <p>My collection of web applications developed with the help of various frameworks</p>
+                                    </div>
+                                    <div class="project-count">
+                                        <div class="absolute"><i>No project available at the moment</i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section" data-project-type="graphic">
+                        <div>
+                            <div>
+                                <h3>graphic design</h3>
+                            </div>
+                            <div class="preview">
+                                <div>
+                                    <div class="item">
+                                        <img src="./gallery/8102.jpg" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img src="./gallery/8101.jpg" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img src="./gallery/8103.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="container">
+                                    <div class="project-description">
+                                        <p>Find some of the pieces designed by myself for the purpose of course requirements using Adobe 
+                                            technology such as Photoshop and Illustrator</p>
+                                    </div>
+                                    <div class="project-count">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section" data-project-type="mobile">
+                        <div>
+                            <div>
+                                <h3>Mobile Developement</h3>
+                            </div>
+                            <div class="preview">
+                                <div>
+                                    <div class="item">
+                                        <div class="empty">
+                                            <b>?</b>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="empty">
+                                            <b>?</b>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="empty">
+                                            <b>?</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="container">
+                                    <div class="project-description">
+                                        <p>My list of mobile applications</p>
+                                    </div>
+                                    <div class="project-count">
+                                        <div class="absolute"><i>No project available at the moment</i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div style="display: flex;width: 1700px;overflow-x: auto;">
+                <div class="bloc">
+                    <img src="img/gallery/Stationery.jpg" />
+                    <h3>Mozilla New Wordmark Stationery</h3>
+                </div>
+                <div class="bloc">
+                    <img src="img/gallery/Project3.jpg" />
+                    <h3>Mozilla New Wordmark Stationery</h3>
+                </div>
+                <div class="bloc">
+                    <img src="img/gallery/Bookcover.png" />
+                    <h3>Mozilla New Wordmark Stationery</h3>
+                </div>
+                <div class="bloc">
+                    <img src="img/gallery/Slipcase.png" />
+                    <h3>Mozilla New Wordmark Stationery</h3>
+                </div>
+            </div>-->
+            <!--<h1 style="color: transparent;font-family: 'Futura PT';text-transform: uppercase;font-size: 3rem;text-align: center;background-color: rgb(52, 202, 52);text-shadow: rgb(0,128,0) 0 0 7px;background-clip: text;">web development</h1>
+
+            <h1 style="color: transparent;font-family: 'Futura PT';text-transform: uppercase;font-size: 3rem;text-align: center;background-color: rgb(52, 202, 52);text-shadow: rgb(0,128,0) 0 0 7px;background-clip: text;">graphic design</h1>-->
+            <article id="graphic-project-window">
+                <div class="breadcrumb">
+                    <ul>
+                        <li class="first-menu-option"
+                            onclick="$('.gallery .options').css('display', 'block'); $('#graphic-project-window').css('display', 'none');">
+                            portfolio</li>
+                        <li class="current">graphic design</li>
+                    </ul>
+                </div>
+                <section>
+                    <div class="element">
+                        <div class="img-space">
+                            <img src="./gallery/8100.jpg" />
+                        </div>
+                        <div class="bar-space ltr">
+                            <div class="absolute">
+                                <div class="glowing-bar"></div>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <div class="grid-display">
+                                <h3>les duos <br /> impossibles <br /> de ferrari</h3>
+                                <h4>coursework</h4>
+                                <p>Annual French comedy show staging a handful of the best french comedians performing
+                                    funny sketches in pairs of unexpected duos. Conception of the promotion in honor to
+                                    the celebration of the gala's 10th anniversary</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="seperator" />
+                <section>
+                    <div class="element">
+                        <div class="img-space">
+                            <img src="./gallery/8101.jpg" />
+                        </div>
+                        <div class="bar-space rtl">
+                            <div class="absolute">
+                                <div class="glowing-bar"></div>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <div class="grid-display">
+                                <h3>suddenly<br />last<br />summer</h3>
+                                <h4>coursework</h4>
+                                <p>Promotional project carried out for a play director from the Art Performing class
+                                    tracing back the 1959 story of Catherine Holly becoming mentally unstable after witnessing
+                                    her cousin's death and risking lobotomy after her aunt Violette Venable requested it to erase her niece's memory
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="seperator" />
+                <section>
+                    <div class="element">
+                        <div class="img-space">
+                            <img src="./gallery/8102.jpg" />
+                        </div>
+                        <div class="bar-space ltr">
+                            <div class="absolute">
+                                <div class="glowing-bar"></div>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <div class="grid-display">
+                                <h3>a pyrrhic<br />victory</h3>
+                                <h4>coursework</h4>
+                                <p>Highlighting awards won by this fictional martial-art-centered documentary, the
+                                    material illustrates the struggle of three MMA newbies outside the octagon with
+                                    their personal lives and downsides coming along their profession</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="seperator" />
+                <section>
+                    <div class="element">
+                        <div class="img-space">
+                            <img src="./gallery/8103.jpg" />
+                        </div>
+                        <div class="bar-space rtl">
+                            <div class="absolute">
+                                <div class="glowing-bar"></div>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <div class="grid-display">
+                                <h3>red</h3>
+                                <h4>coursework</h4>
+                                <p>This poster was crafted to promote the "Red" play of the art performing class. 
+                                    The play stages the eccentric mural painter, Mark Rothko, who is in charge of
+                                    a tremedous project for the Four Season restaurant in New York and his assistant Ken
+                                    emitting doubts on his boss's sense of art
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="seperator" />
+                <section>
+                    <div class="element">
+                        <div class="img-space">
+                            <img src="./gallery/8104.jpg" />
+                        </div>
+                        <div class="bar-space ltr">
+                            <div class="absolute">
+                                <div class="glowing-bar"></div>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <div class="grid-display">
+                                <h3>Win / Lose / Draw</h3>
+                                <h4>coursework</h4>
+                                <p>The first promotional poster designed by myself for a stage play director from the
+                                    Spring 2021 Art Performing class. The theatrical work depicts three different
+                                    scenarios combined in a single piece, each representing particular aspects of life.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <div class="img-view-backdrop">
+                <div class="body">
+                    <div class="img-container">
+                        <img src="" alt="">
+                    </div>
+                    <div class="btn-close">
+                        <svg viewbox="0 0 100 100" onclick="$('.gallery .img-view-backdrop').removeClass('show')">
+                            <line x1="0" y1="0" x2="100" y2="100" stroke="#fff" />
+                            <line x1="0" y1="100" x2="100" y2="0" stroke="#fff" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function () {
+            $(".section").click(function () {
+                $projectAttr = $(this).attr("data-project-type");
+                $findWindow = $("#" + $projectAttr + '-project-window');
+                if ($findWindow.length != 0) {
+                    $findWindow.css("display", "block");
+                    $(".gallery .options").css("display", "none");
+                }
+            });
+
+            $('section .element img').click(function() {
+                $img = $(this).attr("src");
+
+                if ($img) {
+                    $(".gallery .img-view-backdrop img").attr("src", $img);
+                }
+                $(".img-view-backdrop").addClass("show");
+            });
+        })
+
+        let section = document.querySelectorAll(".gallery .section");
+        const graphObjs = document.querySelectorAll("#graphic-project-window section").length;
+        let val = 0;
+        let arr = [];
+        for (tag of section) {
+            arr[val] = { tag };
+            if (arr[val].tag.getAttribute("data-project-type") == "graphic") {
+                arr[val].elements = graphObjs;
+            }
+
+            if (arr[val].elements) {
+                console.log(arr[val].tag.querySelector(".project-info"));
+                arr[val].tag.querySelector(".project-count").innerHTML = `<em>Number of Projects : ${arr[val].elements}</em>`;
+            }
+
+            val += 1;
+        }
+
+        console.log(arr);
+
+    </script>
+
+    <div id="page-footer"></div>
+
+
+
+    <script>
+        navColor = "green";
+        themeColor = "green";
+
+    </script>
+
+    <script src="./js/footer.js"></script>
+    <script src="./js/navbar.js"></script>
+
+</body>
+
+</html>

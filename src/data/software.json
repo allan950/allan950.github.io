@@ -1,0 +1,60 @@
+{
+    "list": [
+        {
+            "name": "illustrator",
+            "level": "average",
+            "percent": "",
+            "description": "Master a fair part of Illustrator features and having designed the most of my promotional materials with the tool.",
+            "img": "ai.png"
+        },
+        {
+            "name": "photoshop",
+            "level": "average",
+            "percent": "",
+            "description": "Developed skills using various of the tools offered by Photoshop and honed up my ability for image refinement and graphic visuals.",
+            "img": "ps.png"
+        },
+        {
+            "name": "MySQL Workbench",
+            "level": "average",
+            "percent": "",
+            "description": "Worked my way around the basics of MYSQL databases and have the ability to manipulate data and alter, create or drop tables and using sql commands.",
+            "img": "mysql.png"
+        },
+        {
+            "name": "unity",
+            "level": "basic",
+            "percent": "",
+            "description": "Have hands-on experience with simple games developed in college course. Worked with Java scripts for functionalities as well.",
+            "img": "unity.png"
+        },
+        {
+            "name": "github",
+            "level": "average",
+            "percent": "",
+            "description": "This version control tool does not hold many secrets from me. Pulls, pushes and commits are practices part of my projects development routine. On top of that, I have practiced CI method using GitHub Actions. ",
+            "img": "github.png"
+        },
+        {
+            "name": "visual studio",
+            "level": "advanced",
+            "percent": "",
+            "description": "Ever since I started coding, Visual Studio has always been the IDE that I construct my projects on for its ease of use and wide range of services.",
+            "img": "visual-studio.png"
+        },
+        {
+            "name": "android studio",
+            "level": "basic",
+            "percent": "",
+            "description": "Having built few apps for coursework in Java and one app soon to be in production with Flutter, Android Studio is my ideal sidekick when working on mobile projects.",
+            "img": "android-studio.png"
+        },
+        {
+            "name": "ibm cloud",
+            "level": "intermediate",
+            "percent": "",
+            "description": "It is the first cloud service provider that helped me familiarize with cloud-native applications and AI services such as Watson Assistant, Natural Language Understanding, Language Translator... ",
+            "img": "ibm-cloud.png"
+        }
+    ]
+}

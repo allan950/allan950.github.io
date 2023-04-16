@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body style="overflow-x: hidden">
+    <header></header>
+
+    <div id="navbar"></div>
+
+    <main class="contact-page">
+        <h2>Have something to ask me?</h2>
+        <p>Do not hesistate to send me a message using the form
+            down below</p>
+        <div class="light-container" style="display: none"></div>
+        <div class="contact">
+            <div class="glow">
+                <div class="border">
+                    <div class="background">
+                        <div class="left-window" style="padding: 10px;">
+                            <div class="contact-info-box">
+                                <div style="padding: 14px 28px;">
+                                    <div>
+                                        <p>Also, feel free to reach out to me if you have any question or need to
+                                            discuss something with me using the following contact information :</p>
+                                    </div>
+                                    <div class="list">
+                                        <ul>
+                                            <li>
+                                                <div class="icon">
+                                                    <i class="bi bi-envelope"></i>
+                                                </div>
+                                                <p>allan95800@yahoo.fr</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <i class="bi bi-phone"></i>
+                                                </div>
+                                                <p>+33634902436</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-window">
+                            <div class="form"
+                                style="display: inline-flex;position: absolute;/*! right: -443px; *//*! padding: 0 7px 7px; *//*! padding: 7px 0 0 0; *//*! padding-left: -17px; *//*! margin-left: -7px; *//*! box-sizing: border-box; *//*! overflow: hidden; */">
+                                <div>
+                                    <form id="contact-form" action="mailto:allan95800@yahoo.fr">
+                                        <div class="row">
+                                            <input type="text" name="first_name" placeholder="First Name" required="">
+                                            <input type="text" name="last_name" placeholder="Last Name" required="">
+                                        </div>
+                                        <div class="row">
+                                            <input type="email" name="email" placeholder="Email Address" required="">
+                                        </div>
+                                        <div class="row textarea">
+                                            <textarea name="message" placeholder="Message" required=""></textarea>
+                                        </div>
+                                        <div class="row button">
+                                            <input id="form-submit-btn" type="submit" value="Send">
+                                        </div>
+                                    </form>
+                                    <div class="submit-success-window"
+                                        style="/*! box-sizing: border-box; */width: inherit;">
+                                        <div class="align">
+
+                                            <div class="row row-logo">
+                                                <div class="form-validation-lg">
+                                                    <div class="logo">
+                                                        <svg style="color: rgb(228, 192, 34);"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="60"
+                                                            zoomAndPan="magnify" viewBox="0 0 30 30.000001" height="60"
+                                                            preserveAspectRatio="xMidYMid meet" version="1.0">
+                                                            <defs>
+                                                                <clipPath id="id1">
+                                                                    <path
+                                                                        d="M 2.328125 4.222656 L 27.734375 4.222656 L 27.734375 24.542969 L 2.328125 24.542969 Z M 2.328125 4.222656 "
+                                                                        clip-rule="nonzero" fill="#e4c022"></path>
+                                                                </clipPath>
+                                                            </defs>
+                                                            <g clip-path="url(#id1)">
+                                                                <path fill="#e4c022"
+                                                                    d="M 27.5 7.53125 L 24.464844 4.542969 C 24.15625 4.238281 23.65625 4.238281 23.347656 4.542969 L 11.035156 16.667969 L 6.824219 12.523438 C 6.527344 12.230469 6 12.230469 5.703125 12.523438 L 2.640625 15.539062 C 2.332031 15.84375 2.332031 16.335938 2.640625 16.640625 L 10.445312 24.324219 C 10.59375 24.472656 10.796875 24.554688 11.007812 24.554688 C 11.214844 24.554688 11.417969 24.472656 11.566406 24.324219 L 27.5 8.632812 C 27.648438 8.488281 27.734375 8.289062 27.734375 8.082031 C 27.734375 7.875 27.648438 7.679688 27.5 7.53125 Z M 27.5 7.53125 "
+                                                                    fill-opacity="1" fill-rule="nonzero"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row row-text" style="box-sizing: border-box;">
+                                                <h4 style="box-sizing: border-box;">successfully submitted!</h4>
+                                                <div class="text-padding" style="box-sizing: border-box;">
+                                                    <p>Thank you for reaching out! Your message will be replied as soon
+                                                        as possible.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row row-btn">
+                                                <a href="index.html">return home</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="position: absolute;right: 0;height: 312px;">
+                                    <div class="error-window">
+                                        <div class="header">
+                                            <h3>Errors</h3>
+                                        </div>
+                                        <div class="body">
+                                            <p id="error-message">All of the text boxes should be filled up</p>
+                                            <div class="bottom-text">
+                                                <p>Fix the error(s) and resubmit your message</p>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <button class="neon-btn" type="button" onclick="$('.form').removeClass('error');">Ok</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+
+    <div id="page-footer"></div>
+
+
+    <script>
+        const navColor = "yellow"
+        const themeColor = "yellow";
+
+    </script>
+
+
+    <script src="./js/footer.js"></script>
+    <script src="./js/navbar.js"></script>
+
+</body>
+
+</html>

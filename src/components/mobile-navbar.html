@@ -1,0 +1,51 @@
+<script>
+    jQuery(
+        $(function() {
+            $("nav .nav-header").attr("data-neon-style", navColor);
+            $(".nav-menu").attr("data-neon-style", navColor);
+        })
+    )
+</script>
+
+<nav>
+    <div class="flexbox">
+        <div class="nav-header" data-neon-style="">
+            <div class="menu-item" onclick="showMenu()"><a>Menu</a></div>
+        </div>
+    </div>
+</nav>
+
+<div class="nav-menu" data-neon-style="" click="showMenu">
+    <div class="grid">
+        <div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Me</a></li>
+            <li><a href="/skills.html">Skills</a></li>
+            <li><a href="/gallery.html">Portfolio</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div>
+        <div>
+            <button onclick="showMenu()">Close</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<script>
+    function showMenu() {
+        var navMenu = document.querySelector(".nav-menu");
+
+        navMenu.classList.toggle("show");
+        if (navMenu.classList.contains("show")) {
+            document.body.style.overflow = "hidden";
+            document.firstElementChild.style.overflow = "hidden";
+            console.log(document);
+        } /* else {
+            document.body.style.overflow = "initial";
+            document.firstElementChild.style.overflow = "initial";
+        } */
+    }
+</script>

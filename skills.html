@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <!--<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Zilla+Slab:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header></header>
+    <div id="navbar"></div>
+    <main>
+        <div class="skills">
+            <h2>software</h2>
+            <div>
+                <div class="software-container">
+                    <div class="progress">
+                        <div
+                        style="height: 100%;display: block;align-items: center;justify-: center;/*! margin-left: 170px; */position: relative;margin: auto;/*! display: block; */">
+                            <div class="mobile-size-display">
+                                <div style="width: 430px;height: 430px;/*! position: relative; */">
+                                    <svg class="progress-bar" style="position: absolute;">
+                                        <circle cy="210" cx="-50" r="180"></circle>
+                                        <circle id="main-circle" cy="210" cx="-50" r="180"
+                                            style="stroke-dashoffset: 905px;"></circle>
+                                    </svg>
+
+                                    <div class="progress-neon-img">
+                                        <img src="icons/software/ai.png"
+                                            style="height: 210px;position: absolute;/*! margin-left: 115px; */">
+                                    </div>
+                                </div>
+                                <div class="description-container">
+                                    <div class="next-neon-btn" style="width: 80px;transform: rotateY(180deg)">
+                                        <svg viewBox="10 -50 310 310" style="display: none;">
+                                            <polygon class="neon-polygon" points="300,75 220,20 220,130"></polygon>
+                                            <polygon class="next-btn" points="300,75 225,25 225,125"
+                                                style="fill: black;/*! box-shadow: aliceblue 3px 3px 4px; */"></polygon>
+                                        </svg>
+                                    </div>
+                                    <div class="content">
+                                        <div class="immobile-box" data-value="1">
+
+                                            <!--  Elements come here! -->
+
+                                        </div>
+                                    </div>
+                                    <div class="next-neon-btn" style="width: 80px;">
+                                        <svg viewBox="10 -50 310 310">
+                                            <polygon class="neon-polygon" points="300,75 220,20 220,130"></polygon>
+                                            <polygon class="next-btn" points="300,75 225,25 225,125"
+                                                style="fill: black;/*! box-shadow: aliceblue 3px 3px 4px; */"></polygon>
+                                        </svg>
+                                    </div>
+                                    
+                                </div>
+                                <div class="mobile-nav-buttons">
+                                    <div style="width: 80px;transform: rotateY(180deg)">
+                                        <svg class="prev-neon-btn" viewBox="10 -50 310 310" style="display: none;" onclick="softwareListNavigation(this)">
+                                            <polygon class="neon-polygon" points="300,75 220,20 220,130"></polygon>
+                                            <polygon class="next-btn" points="300,75 225,25 225,125"
+                                                style="fill: black;/*! box-shadow: aliceblue 3px 3px 4px; */"></polygon>
+                                        </svg>
+                                    </div>
+                                    <div style="width: 80px;">
+                                        <svg class="next-neon-btn" viewBox="10 -50 310 310" onclick="softwareListNavigation(this)">
+                                            <polygon class="neon-polygon" points="300,75 220,20 220,130"></polygon>
+                                            <polygon class="next-btn" points="300,75 225,25 225,125"
+                                                style="fill: black;/*! box-shadow: aliceblue 3px 3px 4px; */"></polygon>
+                                        </svg>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div style="display: none">
+                            <div>
+                                <h3>Mastered</h3>
+                            </div>
+                            <div>Wordpress</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="programming-language-container">
+                    <h2>languages</h2>
+                    <div class="list">
+
+                        <!-- Elements go here! -->
+
+                    </div>
+                </div>
+                <div class="framework-container">
+                    <h2>frameworks</h2>
+                    <div>
+                        <div class="flex-display current-skills">
+                        </div>
+                        <div class="text-seperator">
+                        <p class="to-be-learned-separator-text">On the <br> "Must-Learn" <br> list</p>
+                    </div>
+                        <div class="flex-display unacquired-skills">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <script>
+                var data;
+
+                function getPercentage(number, total) {
+                    return (100 - number) * total / 100;
+                }
+
+                function readTextFile(file, callback) {
+                    var rawFile = new XMLHttpRequest();
+                    rawFile.overrideMimeType("application/json");
+                    rawFile.open("GET", file, true);
+                    rawFile.onreadystatechange = function () {
+                        if (rawFile.readyState === 4 && rawFile.status == "200") {
+                            callback(rawFile.responseText);
+                            areVideosReady = true;
+                            console.log(areVideosReady);
+                        }
+                    }
+                    rawFile.send(null);
+                }
+
+                //usage:
+                readTextFile("data/frameworks.json", function (text) {
+                    data = JSON.parse(text);
+
+                    data.sort(function (a, b) { return b.percentage - a.percentage });
+
+                    var frameworkList = document.querySelector('.framework-container .current-skills');
+                    var otherFrameworkList = document.querySelector('.framework-container .unacquired-skills');
+
+                    for (item of data) {
+                        if (item.percentage != 0) {
+                            frameworkList.innerHTML += block(item);
+                        } else {
+                            otherFrameworkList.innerHTML += block(item);
+                        }
+                    }
+
+                    function block(el) {
+                        return `
+                        <div class="frame-block">
+                                <div>
+                                    <div class="img-box">
+                                        <img
+                                            src="${item.image}">
+                                    </div>
+                                    <div class="progress-bar">
+                                        <svg viewBox="-26 -16 350 40">
+                                            <polyline points="0,0 300,0"></polyline>
+                                            <polyline style="stroke-dasharray: 300;stroke-dashoffset: ${getPercentage(item.percentage, 300)};"
+                                                points="0,0 300,0"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="label">
+                                        <p>${item.name}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                });
+
+                readTextFile("data/software.json", function (res) {
+                    var data = JSON.parse(res);
+                    var wrapper = document.querySelector(".software-container .content .immobile-box");
+
+                    for (var i in data["list"]) {
+                        wrapper.innerHTML += softwareBlock(data["list"][i]);
+                    }
+
+                    wrapper.style.width = (wrapper.children.length * 440) + "px";
+                    console.log(wrapper.style.width);
+
+                    function softwareBlock(el) {
+                        return `
+                        <div class="block" data-img="${el.img}" data-skill-level="${capitalize(el.level)}">
+                                                <div class="subject">${el.name}</div>
+                                                <div class="level">${el.level} Skills</div>
+                                                <p>${el.description}</p>
+                                            </div>
+                        `;
+                    }
+                });
+
+                readTextFile("data/languages.json", function (res) {
+                    var data = JSON.parse(res);
+                    var wrapper = document.querySelector(".programming-language-container .list");
+
+                    const total = 600;
+
+                    data["list"].sort((a,b) => { return b.percent - a.percent; });
+
+                    if (data) {
+
+                        for (var i in data["list"]) {
+                            wrapper.innerHTML += block(data["list"][i]);
+                        }
+
+                        function block(el) {
+                            return `
+                            <div class="row">
+                            <div>
+                                <div class="labels">
+                                    <div class="language-name">
+                                        <p>${el.name}</p>
+                                    </div>
+                                    <div class="percentage">
+                                        <span>${el.percent}%</span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar">
+                                    <svg viewBox="-13 -16 630 32">
+                                        <polyline points="0,0 600,0"></polyline>
+                                        <polyline style="stroke-dasharray: 600;stroke-dashoffset: ${getPercentage(el.percent, total)};"
+                                            points="0,0 600,0"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                            `;
+                        }
+                    }
+                })
+
+                function capitalize(word) {
+                    var firstLetter = word.charAt(0).toUpperCase();
+                    word = word.replace(word.charAt(0), firstLetter);
+
+                    return word;
+                }
+
+            </script>
+
+<script>
+    var neon = document.querySelectorAll(".next-neon-btn svg");
+    var block = document.getElementsByClassName("immobile-box")[0];
+    var position = 0;
+    var value = 1;
+
+    var img = document.getElementsByClassName("progress-neon-img")[0];
+    var imgAttr = img.children[0].attributes[0];
+
+    /*Button previous*/
+    var prevBtn = document.getElementsByClassName("next-btn")[0];
+    var nextBtn = document.getElementsByClassName("next-btn")[1];
+
+    function progressBar() {
+        var proBar = document.getElementById("main-circle");
+        let currentValue = block.getAttribute("data-value");
+        let blocks = document.querySelectorAll(".immobile-box .block");
+        let blockElmt = blocks[currentValue - 1];
+
+        const skills = {
+            "Basic": "calc(80px * 1131 / 100)",
+            "Intermediate": "calc(60px * 1131 / 100)",
+            "Average": "calc(40px * 1131 / 100)",
+            "Advanced": "calc(20px * 1131 / 100)",
+            "Expert": "calc(0px * 1131 / 100)"
+        };
+
+        const currentSkill = skills[blockElmt.getAttribute('data-skill-level')];
+        proBar.style.strokeDashoffset = currentSkill;
+
+        var regex = new RegExp("/[a-z-]+\.[a-z]+$");
+        var imgPath = imgAttr.value.match(regex);
+
+
+        if (imgPath) {
+            imgAttr.value = imgAttr.value.replace(imgPath, "/"+blockElmt.getAttribute('data-img'));
+        } else {
+            imgAttr.value = imgAttr.value + blockElmt.getAttribute('data-img');
+        }
+
+
+        /*0 - 226 - 452 - 679 - 905 - 1131
+          Basic - Intermediate - Average - Advanced - Expert*/
+
+        /*for(let i in blocks) {
+            console.log(blocks[i]);
+            if (block.getAttribute("data-value")) {
+
+            }
+        }*/
+
+        /*if (block.getAttribute("data-value") == 1) {
+            proBar.style.strokeDashoffset = "905";
+            barShadow.style.strokeDashoffset = "905";
+            imgAttr.value = "wordpress.svg";
+        }
+        else if (block.getAttribute("data-value") == 2) {
+            proBar.style.strokeDashoffset = "452";
+            barShadow.style.strokeDashoffset = "452";
+            imgAttr.value = "ai.svg";
+        }
+        else if (block.getAttribute("data-value") == 3) {
+            proBar.style.strokeDashoffset = "452";
+            barShadow.style.strokeDashoffset = "452";
+            imgAttr.value = "ps.svg";
+        }
+        else if (block.getAttribute("data-value") == 4) {
+            proBar.style.strokeDashoffset = "226";
+            barShadow.style.strokeDashoffset = "226";
+            imgAttr.value = "mysql.svg";
+        }
+        else if (block.getAttribute("data-value") == 5) {
+            proBar.style.strokeDashoffset = "452";
+            barShadow.style.strokeDashoffset = "452";
+            imgAttr.value = "unity.svg";
+        }*/
+    }
+
+    prevBtn.addEventListener("mouseover", function () {
+        neon[0].classList.add("hover");
+    })
+    prevBtn.addEventListener("mouseout", function () {
+        neon[0].classList.remove("hover");
+    })
+    prevBtn.addEventListener("click", function () {
+        position += 440;
+        block.style.transform = "translateX(" + position + "px)";
+        if (position >= -1759) {
+            neon[1].style.display = "block";
+        }
+        else {
+            neon[1].style.display = "block";
+        }
+
+        if (position == 0) {
+            neon[0].style.display = "none";
+        }
+
+        value -= 1;
+        block.setAttribute("data-value", value);
+
+        progressBar();
+
+    })
+
+    /*Button next*/
+
+    nextBtn.addEventListener("click", function () {
+        position += -440;
+        block.style.transform = "translateX(" + position + "px)";
+        var width = document.querySelectorAll(".immobile-box .block").length;
+        var newWidth = width - 1;
+        var blockSize = document.querySelector(".immobile-box .block").clientWidth;
+        var boxSize = -(blockSize * newWidth);
+
+        value += 1;
+
+        if (position <= boxSize || value == width) {
+            neon[1].style.display = "none";
+        }
+        else {
+            neon[1].style.display = "block";
+        }
+
+        if (position <= 1) {
+            neon[0].style.display = "block";
+        }
+        block.setAttribute("data-value", value);
+
+        progressBar();
+    })
+    nextBtn.addEventListener("mouseover", function () {
+        neon[1].classList.add("hover");
+    })
+    nextBtn.addEventListener("mouseout", function () {
+        neon[1].classList.remove("hover");
+    })
+
+
+
+    function softwareListNavigation(btn) {
+        const btnParent = btn.parentElement;
+        const listOfBlocks = document.querySelectorAll(".software-container .immobile-box .block");
+
+
+        var blockSize = document.querySelector(".software-container .immobile-box .block").clientWidth;
+        
+        var width = document.querySelectorAll(".immobile-box .block").length;
+        var newWidth = width - 1;
+
+        var boxSize = -(blockSize * newWidth);
+
+        if (btn.classList.contains("prev-neon-btn")) {
+            position += blockSize;
+
+            if (value == 1 || position >= 0) {
+                btn.style.display = "none";
+            }
+            else {
+                btnParent.nextElementSibling.querySelector(".next-neon-btn").style.display = "block";
+            }
+
+            value -= 1;
+        }
+        else if (btn.classList.contains("next-neon-btn")) {
+            position += -blockSize;
+            
+            if (value == newWidth || position <= boxSize) {
+                btn.style.display = "none";
+            } else {
+                btnParent.previousElementSibling.querySelector(".prev-neon-btn").style.display = "block";
+            }
+
+            value += 1;
+        }
+
+
+        block.style.transform = "translateX(" + position + "px)";
+        block.setAttribute("data-value", value);
+
+        progressBar();
+    }
+
+
+    block.style.width = (blocks.length * blocks[0].clientWidth) + "px";
+
+</script>
+
+
+            <script>
+                /***
+                 * Page Animation
+                 ***/
+
+                $(window).on('load', function () {
+                    $(".software-container").addClass("visible");
+                });
+
+                $(document).ready(function () {
+                    $(window).scroll(function () {
+                        //console.log($(window).scrollTop($(".software-container").offset().top));
+                        //console.log($(window).offset().top);
+                        if ($(window).scrollTop() >= $(".programming-language-container").offset().top - 150) {
+                            $(".programming-language-container").addClass("visible");
+                        }
+
+                        if ($(window).scrollTop() >= $(".framework-container").offset().top - 150) {
+                            $(".framework-container").addClass("visible");
+                        }
+                    });
+                })
+            </script>
+        </div>
+    </main>
+    <div id="page-footer"></div>
+
+    <script>
+        navColor = "red";
+        themeColor = "red";
+    </script>
+
+
+    <script src="./js/footer.js"></script>
+    <script src="./js/navbar.js"></script>
+</body>
+
+</html>
