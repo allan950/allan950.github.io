@@ -134,7 +134,7 @@
                 }
 
                 //usage:
-                readTextFile("data/frameworks.json", function (text) {
+                readTextFile("src/data/frameworks.json", function (text) {
                     data = JSON.parse(text);
 
                     data.sort(function (a, b) { return b.percentage - a.percentage });
@@ -174,7 +174,7 @@
                     }
                 });
 
-                readTextFile("data/software.json", function (res) {
+                readTextFile("src/data/software.json", function (res) {
                     var data = JSON.parse(res);
                     var wrapper = document.querySelector(".software-container .content .immobile-box");
 
@@ -196,7 +196,7 @@
                     }
                 });
 
-                readTextFile("data/languages.json", function (res) {
+                readTextFile("src/data/languages.json", function (res) {
                     var data = JSON.parse(res);
                     var wrapper = document.querySelector(".programming-language-container .list");
 
