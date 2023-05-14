@@ -185,6 +185,32 @@
         </div>
         </div>
     </main>
+    
+    <script>
+        $('.contact-page .header').addClass('visible');
+
+        $(window).scroll(function() {
+            $windowPosition = $(window).scrollTop();
+            $blockTop1 = $('.contact-page .centered .block:nth-of-type(1)').offset().top;
+            $blockTop2 = $('.contact-page .centered .block:nth-of-type(2)').offset().top;
+            $distanceToBlock1 = $blockTop1 - 150 - $windowPosition;
+            $distanceToBlock2 = $blockTop2 - 150 - $windowPosition;
+            $blockHeight = $('.contact-page .centered .block').height();
+
+
+            if ($distanceToBlock1 <= 0 && $distanceToBlock1 > -$blockHeight) {
+                $('.contact-page .centered .block:nth-of-type(1)').addClass('visible');
+            } else {
+                $('.contact-page .centered .block:nth-of-type(1)').removeClass('visible');
+            }
+
+            if ($distanceToBlock2 <= 0 && $distanceToBlock2 > -$blockHeight) {
+                $('.contact-page .centered .block:nth-of-type(2)').addClass('visible');
+            } else {
+                $('.contact-page .centered .block:nth-of-type(2)').removeClass('visible');
+            }
+        });
+    </script>
 
     <script src="src/main.js"></script>
 
