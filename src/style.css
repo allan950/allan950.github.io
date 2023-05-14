@@ -68,6 +68,15 @@ a {
     cursor: pointer;
 }
 
+.fixed-visual-size {
+    min-height: calc(100vh - 70px - 100px);
+display: flex;
+}
+
+.fixed-visual-size > div:first-of-type {
+    flex: 1;
+}
+
 nav {
     width: 100%;
     height: 70px;
@@ -471,6 +480,12 @@ nav .nav-header[data-neon-style="red"] .menu-item.logo .face {
     box-shadow: red 0 0 18px, rgba(255, 0, 0, 0.4) 0 0 11px;
 }
 
+#navbar .nav-menu[data-neon-style="red"] button {
+    color: #e85252;
+background-color: red;
+box-shadow: #802b2b 0 0 18px 5px, #e43939 inset 0 0 18px 5px;
+}
+
 /****** Green Glowing navbar *****/
 
 nav .nav-header[data-neon-style="green"] {
@@ -491,6 +506,12 @@ nav .nav-header[data-neon-style="green"] .menu-item a:hover {
 nav .nav-header[data-neon-style="green"] .menu-item.logo .face {
     background-color: rgb(0, 128, 0);
     box-shadow: rgb(0, 128, 0) 0 0 18px, rgba(0, 128, 0, 0.4) 0 0 11px;
+}
+
+#navbar .nav-menu[data-neon-style="green"] button {
+    color: #2aa22a;
+background-color: green;
+box-shadow: #104f10 0 0 18px 5px, #11a911 inset 0 0 18px 5px;
 }
 
 /****** Yellow Glowing navbar *****/
@@ -515,6 +536,12 @@ nav .nav-header[data-neon-style="yellow"] .menu-item.logo .face {
     box-shadow: rgb(228, 192, 35) 0 0 18px, rgba(228, 192, 35, 0.4) 0 0 11px;
 }
 
+#navbar .nav-menu[data-neon-style="yellow"] button {
+    background-color: rgb(255, 215, 0);
+box-shadow: rgba(255, 215, 0, 0.5) 0px 0px 11px 1px, rgba(255, 215, 0, 0.2) 0px 0px 16px 4px, yellow inset 0px 0px 11px 5px;
+color: rgb(224, 160, 48);
+}
+
 /****** Purple Glowing navbar *****/
 
 nav .nav-header[data-neon-style="purple"] {
@@ -535,6 +562,12 @@ nav .nav-header[data-neon-style="purple"] .menu-item a:hover {
 nav .nav-header[data-neon-style="purple"] .menu-item.logo .face {
     background-color: rgb(123, 30, 186);
     box-shadow: rgb(123, 30, 186) 0 0 18px, rgba(123, 30, 186, 0.4) 0 0 11px;
+}
+
+#navbar .nav-menu[data-neon-style="purple"] button {
+    color: #8f09fe;
+    background-color: #4c067b;
+box-shadow: #4c067b 0px 0px 18px 5px, #6b18bd inset 0px 0px 18px 5px;
 }
 
 /****** Blue Glowing navbar *****/
@@ -560,6 +593,12 @@ nav .nav-header[data-neon-style="blue"] .menu-item.logo .face {
     box-shadow: rgb(123, 30, 186) 0 0 18px, rgba(123, 30, 186,0.4) 0 0 11px;*/
 }
 
+#navbar .nav-menu[data-neon-style="blue"] button {
+    color: #5bc;
+background-color: aqua;
+box-shadow: #197a7a 0 0 18px 5px, #4dcfcf inset 0 0 18px 5px;
+}
+
 
 @media only screen and (max-width: 650px) {
     #navbar nav,
@@ -571,7 +610,7 @@ nav .nav-header[data-neon-style="blue"] .menu-item.logo .face {
         position: fixed;
         width: 100%;
         height: 100%;
-        background-color: #171616;
+        background-color: #090909;
         top: 0;
         left: 0;
         z-index: 110;
@@ -608,6 +647,22 @@ nav .nav-header[data-neon-style="blue"] .menu-item.logo .face {
     #navbar .nav-menu ul a {
         font-size: .95em;
         text-decoration: none;
+    }
+
+    #navbar .nav-menu button {
+        border-radius: 40px;
+    border: none;
+    padding: 12px 18px;
+    transition: box-shadow 0.7s;
+    text-transform: uppercase;
+    font-family: Candara;
+    font-size: 12px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 12px;
+    transition: box-shadow 0.7s;
+    text-indent: 8px;
     }
 }
 
@@ -1382,6 +1437,231 @@ padding: 0 12px;
 
     .contact .form .row:first-of-type input:last-child {
         margin-left: 4px;
+    }
+}
+
+
+.contact-page .header h2 {
+    color: #e4c023;
+text-align: center;
+margin-bottom: 0;
+font-size: 2.9vw;
+text-shadow: rgb(233, 205, 80) 0 0 2px, rgba(233, 205, 80, 0.7) 0 0 3px, rgba(233, 205, 80, 0.4) 0 0 5px;
+}
+
+.contact-page .header {
+    min-height: calc(100vh - 80px);
+    display: flex;
+justify-content: center;
+align-items: center;
+opacity:0;
+transition: .6s ease-in;
+transition-delay: .5s;
+}
+
+.contact-page .header.visible {
+    opacity: 1;
+}
+
+.contact-page .header p {
+    text-align: center;
+    font-size: 1.3vw;
+    margin-top: 16px;
+}
+
+.contact-page .centered {
+    display: grid;
+    justify-items: center;
+}
+
+.contact-page .centered p {
+    text-align: center;
+    align-self: end;
+}
+
+.contact-page .centered .block {
+    min-height: 96vh;
+    display: grid;
+grid-auto-rows: 184px auto;
+opacity: 0;
+transform: translateY(100px);
+transition: .7s ease-in;
+}
+
+.contact-page .centered .block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-page .central-container {
+    display: flex;
+    margin-top: 26px;
+    align-items: center;
+}
+
+.contact-page .central-container .title {
+    color: orange;
+    font-size: 4em;
+}
+
+.contact-page .central-container .title,
+.contact-page .central-container .info-text {
+    align-self: center;
+}
+
+.contact-page .central-container .info-text h2 {
+    color: #e4c023;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 3.7em;
+    text-shadow: rgb(233, 205, 80) 0 0 2px, rgba(233, 205, 80, 0.7) 0 0 3px, rgba(233, 205, 80, 0.4) 0 0 5px;
+    word-wrap: break-word;
+line-height: 0.925em;
+margin-top: 0;
+}
+
+.contact-page .block:nth-of-type(2) .central-container .info-text h2 {
+    text-align: left;
+    font-size: 4vw;
+}
+
+.contact-page .central-container .info-text h6 {
+    color: white;
+margin: 10px 0;
+font-size: 1.6vw;
+font-weight: 200;
+font-family: 'Montserrat';
+}
+
+.contact-page .central-container .title h1 {
+    font-family: 'Mom Cake';
+    margin: 0;
+    color: black;
+    text-shadow: rgb(233, 205, 80) 0 0 5px;
+line-height: 0.65em;
+text-transform: uppercase;
+padding-top: 18px;
+font-size: 8.05vw;
+letter-spacing: .3vw;
+}
+
+.contact-page .central-container .title h2 {
+    font-family: 'Mom Cake';
+    margin: 0;
+    font-size: 3.85vw;
+    letter-spacing: 0.26em;
+    line-height: 0.9em;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: rgb(233, 205, 80) 0 0 4px;
+}
+
+.contact-page .central-container .neon-light {
+    margin: 0 44px;
+    width: 15px;
+    position: relative;
+    height: 234px;
+}
+
+.contact-page .central-container .neon-light .tube {
+    position: absolute;
+    background-color: #e4c023;
+box-shadow: rgb(233, 205, 80) 0 0 10px 2px, rgb(233, 205, 80) inset 0 0 10px 2px;
+    height: 100%;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.contact-page .central-container .info-text {
+    max-width: 340px;
+}
+
+.contact-page .central-container .info-text h3 {
+    font-family: 'Mom Cake';
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.contact-page .central-container .info-text a {
+    background-color: orange;
+    box-shadow: rgba(237, 156, 10, 0.6) 0 0 11px 2px, rgba(237, 156, 10, 0.3) 0 0 16px 2px, rgb(221, 189, 131) inset 0 0 10px;
+    color: #d97134;
+    text-decoration: none;
+    padding-left: 21px;
+}
+
+@media only screen and (max-width: 650px) {
+
+    .contact-page .header > div {
+        padding-left: 12px;
+padding-right: 12px;
+    }
+
+    .contact-page .header h2 {
+        font-size: 2.6em;
+    }
+
+    .contact-page .header p {
+        font-size: 1.2em;
+    }
+
+    .contact-page .centered .block {
+        width: 100%;
+    }
+
+    .contact-page .central-container {
+        display: grid;
+    }
+
+    .contact-page .central-container .neon-light {
+        width: 70%;
+height: 15px;
+margin: auto;
+    }
+
+    .contact-page .central-container .title {
+        text-align: center;
+    }
+
+    .contact-page .central-container .title h1 {
+        font-size: 1.4em;
+    }
+
+    .contact-page .central-container .title h2 {
+        font-size: .625em;
+text-indent: .26em;
+    }
+
+    .contact-page .central-container .info-text {
+        max-width: 88vw;
+        justify-self: center;
+        text-align: center;
+      }
+
+      .contact-page .central-container .info-text h2 {
+        font-size: 2.8em;
+      }
+
+      .contact-page .block:nth-of-type(2) .central-container .info-text h2 {
+        font-size: 2.5em !important;
+      }
+
+      .contact-page .central-container .info-text h6 {
+        font-size: 1em;
+      }
+}
+
+
+
+@media only screen and (min-width: 1440px) {
+    .home-page .heading h1 {
+        font-size: 6.2vw;
+line-height: 6.2vw;
+    }
+
+    .home-page .heading h4 {
+        font-size: 2vw;
     }
 }
 
@@ -3162,15 +3442,21 @@ transform: translateX(-100%) translateY(-79px) rotateY(180deg);
         font-size: .825em;
     }
 
+    .about .first-container .headline {
+        display: grid;
+grid-auto-rows: auto 10vh;
+    }
+
     .about .first-container .headline h2 {
-        font-size: 9.4em;
 word-break: break-word;
 line-height: .9em;
-margin: 43px auto 85px;
+font-size: 40.1vw;
+  margin: 0;
     }
 
     .about .first-container .headline h4 {
-        font-size: 1.6em;
+        font-size: 6.7vw;
+  align-self: center;
     }
 
     .about .second-container {

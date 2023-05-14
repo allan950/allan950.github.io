@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 
 // Navigation
 app.get('/', (req, res) => {
-    res.write("Hello World!!!");
+    res.sendFile(__dirname + '/index.html')
 });
 
 app.get('/formsubmission', (req, res) => {
@@ -27,6 +27,10 @@ app.get('/formsubmission', (req, res) => {
 app.get('/about', (req, res) => {
    res.sendFile(__dirname + '/about.html')
 });
+
+app.get('/contact', (req, res) => {
+    res.sendFile(__dirname + '/contact.html')
+ });
 
 app.get('/404', (req, res) => {
     res.sendFile(__dirname + '/templates/404.html');

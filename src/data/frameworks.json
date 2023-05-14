@@ -68,5 +68,15 @@
         "name": "tailwind css",
         "percentage": 20,
         "image": "icons/frameworks/tailwind_css_logo.svg"
+    },
+    {
+        "name": "svelte.js",
+        "percentage": 0,
+        "image": "icons/frameworks/Svelte_Logo.svg.png"
+    },
+    {
+        "name": "flowbite",
+        "percentage": 0,
+        "image": "icons/frameworks/flowbite-logo.png"
     }
 ]
