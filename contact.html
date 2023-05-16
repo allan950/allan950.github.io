@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
     <title></title>
-    <link rel="stylesheet" type="style/css" href="src/style.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
@@ -185,6 +185,32 @@
         </div>
         </div>
     </main>
+    
+    <script>
+        $('.contact-page .header').addClass('visible');
+
+        $(window).scroll(function() {
+            $windowPosition = $(window).scrollTop();
+            $blockTop1 = $('.contact-page .centered .block:nth-of-type(1)').offset().top;
+            $blockTop2 = $('.contact-page .centered .block:nth-of-type(2)').offset().top;
+            $distanceToBlock1 = $blockTop1 - 150 - $windowPosition;
+            $distanceToBlock2 = $blockTop2 - 150 - $windowPosition;
+            $blockHeight = $('.contact-page .centered .block').height();
+
+
+            if ($distanceToBlock1 <= 0 && $distanceToBlock1 > -$blockHeight) {
+                $('.contact-page .centered .block:nth-of-type(1)').addClass('visible');
+            } else {
+                $('.contact-page .centered .block:nth-of-type(1)').removeClass('visible');
+            }
+
+            if ($distanceToBlock2 <= 0 && $distanceToBlock2 > -$blockHeight) {
+                $('.contact-page .centered .block:nth-of-type(2)').addClass('visible');
+            } else {
+                $('.contact-page .centered .block:nth-of-type(2)').removeClass('visible');
+            }
+        });
+    </script>
 
     <script src="src/main.js"></script>
 
