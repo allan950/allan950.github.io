@@ -726,6 +726,13 @@ main.visible {
 
 .home-page {
     display: flex;
+    justify-content: center;
+height: calc(100vh - 75px - 100px);
+align-items: center;
+}
+
+.home-page > div {
+    display: inline-flex;
 }
 
 .home-page .heading {
@@ -738,9 +745,9 @@ main.visible {
 }
 
 .home-page .heading h1 {
-    font-size: 5em;
+    font-size: 6.2vw;
+line-height: 5.4vw;
     font-weight: 900;
-    line-height: 70px;
     margin-bottom: 40px;
     font-family: 'Expletus Sans';
 }
@@ -754,7 +761,7 @@ main.visible {
 .home-page .heading h4 {
     font-family: 'Mom Cake';
     letter-spacing: .2em;
-    font-size: 1.6em;
+    font-size: 2vw;
     color: black;
     text-shadow: aqua 0 0 2px, rgba(0, 255, 255, 0.4) 0 0 4px;
     margin: 4px 0;
@@ -2137,6 +2144,16 @@ line-height: 6.2vw;
 }
 
 @media only screen and (max-width: 650px) {
+    .gallery .options .section {
+        width: auto;
+        height: auto;
+    }
+
+    .gallery .options .section h3 {
+        margin: 10px auto;
+        font-size: 1.3em;
+    }
+
     .gallery .options .section .preview {
         padding: 10px 0;
     }
@@ -3027,7 +3044,8 @@ transform: translateX(-100%) translateY(-79px) rotateY(180deg);
     align-items: center;
     position: relative;
     justify-content: center;
-    padding-top: 50px;
+    height: calc(100% - 2.9em - 30px - 184px);
+    padding-top: 0;
 }
 
 .about .third-container .content > div:first-of-type {
@@ -3228,15 +3246,17 @@ transform: translateX(-100%) translateY(-79px) rotateY(180deg);
 }
 
 .about .fourth-container .first-bubble .circular-shape {
-    margin: 8px auto;
     font-size: .8em;
-    width: 334px;
-    height: 334px;
+    /* width: 334px;
+    height: 334px; */
     background-color: #4c067b;
     filter: drop-shadow(rgb(107, 24, 189) 0px 0px 3px) drop-shadow(rgba(107, 24, 189, 0.7) 0px 0px 5px) drop-shadow(rgba(107, 24, 189, 0.4) 0px 0px 8px);
     border-radius: 50%;
     margin-right: 0;
     margin-top: -60px;
+    height: 26.1em;
+    width: 26.1em;
+    margin-top: 60px;
 }
 
 .about .fourth-container .first-bubble .circular-shape::before {
@@ -3257,6 +3277,22 @@ transform: translateX(-100%) translateY(-79px) rotateY(180deg);
             0 100%);
     shape-margin: 13px;
 }
+
+.about .fourth-container .first-bubble .circular-shape::after {
+    content: 'My goals';
+top: 0;
+position: absolute;
+text-align: center;
+font-size: 3.8em;
+text-transform: capitalize;
+color: #6a18bc;
+text-shadow: #6b18bd 0 0 9px;
+text-shadow: rgb(121, 68, 175) 0 0 2px, rgba(121, 68, 175, 0.7) 0 0 4px, rgba(121, 68, 175, 0.4) 0 0 9px;
+color: #541691;
+text-indent: -140px;
+font-family: 'Expletus Sans';
+transform: translateX(-86px);
+  }
 
 .about .fourth-container .first-bubble .circular-shape p::before {
     content: "";
@@ -3291,6 +3327,7 @@ transform: translateX(-100%) translateY(-79px) rotateY(180deg);
 }
 
 .about .fourth-container .second-bubble .circular-shape {
+    position: relative;
     width: 276px;
     height: 276px;
     border: 2px solid #fff;
@@ -3308,6 +3345,17 @@ transform: translateX(-100%) translateY(-79px) rotateY(180deg);
     shape-outside: polygon(0% 0%, 98% 0%, 59.79% 3.31%, 25.74% 16.18%, 4.65% 32.35%, 0% 50%, 5.38% 67.65%, 30.15% 87.13%, 63.47% 97.43%, 98% 100%, 0% 100%);
     shape-margin: 22px;
 }
+
+
+.about .fourth-container .second-bubble .circular-shape:after {
+    content: 'On the long-run ...';
+text-align: center;
+font-family: 'Mom Cake';
+top: -74px;
+position: absolute;
+right: -124px;
+font-size: 2.2em;
+  }
 
 .about .fourth-container .second-bubble .circular-shape p {
     font-size: .735em;
@@ -3337,6 +3385,7 @@ transform: translateX(-100%) translateY(-79px) rotateY(180deg);
     position: relative;
     height: 100%;
     padding: 12px 40px 5px;
+    display: grid;
 }
 
 .about .fifth-container .content .glowing-arrow {
@@ -3367,10 +3416,11 @@ transform: translateX(-100%) translateY(-79px) rotateY(180deg);
     align-items: center;
     font-family: 'Noto Sans';
     padding: 40px 0 0;
+    align-self: start;
 }
 
 .about .fifth-container .content .info .title-and-button {
-    margin-top: 52px;
+    margin-top: 0;
 }
 
 .about .fifth-container .content .info .title-and-button h3 {
@@ -3469,6 +3519,7 @@ display: flex;
 flex-wrap: wrap;
 flex-direction: column-reverse;
 justify-content: start;
+justify-content: center;
     }
 
     .about .second-container > div:first-of-type > div:first-of-type {
@@ -3495,22 +3546,27 @@ padding: 0 24px;
     .about .second-container .content .image {
         width: initial;
         padding: 0;
+        margin-bottom: 12px;
     }
 
     .about .second-container .profile-img {
-margin: 116px 0 34px;
-left: 0 !important;
+        margin-top: 0;
+        left: 0 !important;
     }
 
     .about .second-container .profile-img::after {
         transform: translateY(-111%) translateX(-9px);
-        width: 254px;
-height: 254px;
+       /*  width: 254px;
+height: 254px; */
+width: 204px;
+height: 204px;
     }
 
     .about .second-container .profile-img img {
-        width: 236px;
-        height: 236px;
+        /* width: 236px;
+        height: 236px; */
+        width: 186px;
+        height: 186px;
     }
 
     .about .third-container .content {
@@ -3604,13 +3660,13 @@ margin-top: 26px;
     }
 
     .about .fourth-container .content .first-bubble .circular-shape {
-        width: 264px;
-height: 264px;
+        width: 21em;
+        height: 21em;
     }
     
     .about .fourth-container .content .second-bubble .circular-shape {
-        width: 208px;
-height: 208px;
+        height: 13em;
+        width: 13em;
     }
 
     .about .fourth-container .second-bubble .circular-shape::before,
@@ -3625,6 +3681,10 @@ height: 208px;
     .about .fourth-container .content .second-bubble .circular-shape p {
         font-size: .56em;
     }
+
+    .about .fifth-container .content .info {
+        padding: 0;
+      }
     
     .about .fifth-container .content .info .title-and-button .text h2 {
         font-size: 2.4em;
@@ -3639,6 +3699,26 @@ margin-bottom: 20px;
         min-height: 252px;
     }
     
+}
+
+@media only screen and (min-width: 1860px) {
+    .about .fourth-container .first-bubble .circular-shape {
+        height: 39em;
+        width: 39em;
+    }
+
+    .about .fourth-container .first-bubble .circular-shape p {
+        font-size: 1.37em;
+    }
+
+    .about .fourth-container .second-bubble .circular-shape {
+        height: 21em;
+        width: 21em;
+    }
+
+    .about .fourth-container .second-bubble .circular-shape p {
+        font-size: .925em;
+    }
 }
 
 

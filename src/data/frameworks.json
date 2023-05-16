@@ -72,7 +72,7 @@
     {
         "name": "svelte.js",
         "percentage": 0,
-        "image": "icons/frameworks/Svelte_Logo.svg.png"
+        "image": "icons/frameworks/Svelte_Logo.svg"
     },
     {
         "name": "flowbite",

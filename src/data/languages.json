@@ -27,6 +27,10 @@
         {
             "name": "php",
             "percent": 40
+        },
+        {
+            "name": "sql",
+            "percent": 65
         }
     ]
 }
