@@ -60,7 +60,6 @@
             "name": "Amazon Web Services",
             "level": "basic",
             "percent": "",
-            "descripti": "Currently acquainting myself with the large catalog of AWS and its infrastructure, concepts of security, shared responsibility model, and pay-as-go services are however assimilated. A tour of the frequently utilized services such as EC2 and S3 has been done which justifies a minimum of practical experience",
             "description": "Core concepts of cloud computing have been assimilated and practical use of common services such as EC2 and S3 justifies my certification as a \"Cloud Practitioner\"",
             "img": "aws.png"
         }
