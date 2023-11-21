@@ -1,0 +1,486 @@
+ .skills h2 {
+    color: red;
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+    margin: 20px 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-shadow: rgb(246, 86, 86) 0px 0px 2px, rgba(246, 86, 86, 0.6) 0 0 4px, rgba(246, 86, 86, 0.3) 0 0 6px;
+    text-indent: 7px;
+}
+
+.software-container {
+    position: relative;
+    height: 430px;
+    margin-bottom: 130px;
+    transition: 1s ease-in;
+    opacity: 0;
+}
+
+.software-container.visible {
+    opacity: 1;
+}
+
+.progress {
+    position: relative;
+    height: 430px;
+}
+
+.progress .mobile-size-display {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.progress .mobile-size-display .description-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+}
+
+.progress .mobile-size-display .mobile-nav-buttons {
+    display: none;
+}
+
+div svg circle {
+    transform: translate(-30%, -30%);
+    stroke-width: 21;
+    fill: none;
+    stroke: red;
+    stroke-linecap: round;
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(-90deg) translate(-165px, 5px);
+}
+
+div svg circle:nth-child(2),
+div svg circle:nth-child(3),
+.programming-language-container .row .progress-bar svg polyline:nth-child(2),
+.programming-language-container .row .progress-bar svg polyline:nth-child(3) {
+    stroke: red;
+    stroke-width: 11px;
+    stroke-linecap: round;
+    fill: none;
+}
+
+div svg circle:nth-child(2),
+div svg circle:nth-child(3) {
+    stroke: red;
+    stroke-dasharray: 1131;
+    stroke-dashoffset: 905;
+    stroke-width: 14px;
+    animation: 1.4s ease-in-out infinite both circle-animation;
+}
+
+div svg circle:nth-child(1),
+.programming-language-container .row .progress-bar svg polyline:nth-child(1) {
+    stroke: white;
+    stroke-width: 1px;
+    opacity: 0.4;
+}
+
+.progress .content {
+    color: white;
+    width: 440px;
+    overflow-x: hidden;
+}
+
+.progress .content .subject {
+    font-size: 48px;
+    text-shadow: red 0 0 3px, rgba(255, 0, 0, 0.4) 0 0 4px;
+    color: black;
+    font-family: 'Zilla Slab', serif;
+    font-weight: 500;
+    font-family: 'Mom Cake';
+    letter-spacing: 0.05em;
+    line-height: .8em;
+    margin-bottom: 8px;
+}
+
+.progress .content .level {
+    font-weight: 300;
+    font-family: 'Montserrat';
+    font-size: 1.4em;
+    color: #8d8787;
+    text-transform: capitalize;
+}
+
+.progress .content .block p {
+    font-family: 'Montserrat', serif;
+    font-weight: 400;
+    font-size: 0.85em;
+}
+
+.progress div svg .neon-polygon {
+    fill: red;
+    filter: blur(5px);
+    transition: transform 0.5s;
+}
+
+.progress div svg.hover .neon-polygon {
+    transform: translateX(-15%) translateY(-4.5%) scale(1.2);
+}
+
+.progress .content .immobile-box {
+    transform: translateX(0%);
+    display: inline-flex;
+    transition: ease-in transform 0.8s;
+}
+
+.progress .content .immobile-box .block {
+    max-width: 440px;
+    width: 440px;
+    padding: 0 3px;
+}
+
+.progress .progress-bar {
+    width: 430px;
+    height: 430px;
+}
+
+.progress #main-circle,
+.progress #main-circle-shadow {
+    transition: 0.7s stroke-dashoffset;
+    filter: drop-shadow(rgb(246, 86, 86) 0px 0px 2px) drop-shadow(rgba(246, 86, 86, 0.6) 0 0 4px) drop-shadow(rgba(246, 86, 86, 0.3) 0 0 6px);
+}
+
+.progress .progress-neon-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress .progress-neon-img img {
+    filter: drop-shadow(rgba(255, 0, 0, 0.8) 0 0 3px) drop-shadow(rgba(255, 0, 0, 0.5) 0 0 7px);
+}
+
+.programming-language-container {
+    min-height: 400px;
+    opacity: 0;
+    transform: translateX(-100%);
+    margin-bottom: 100px;
+    transition: 1s ease-in;
+}
+
+.programming-language-container.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.programming-language-container .list {
+    display: grid;
+}
+
+.programming-language-container .list .row {
+    display: inline;
+    margin: 0 auto;
+}
+
+.programming-language-container .row p {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    text-transform: uppercase;
+    font-family: 'Futura PT';
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.programming-language-container .row .labels {
+    display: inline-flex;
+    width: 100%;
+}
+
+.programming-language-container .row .labels .language-name {
+    text-align: left;
+}
+
+.programming-language-container .row .labels .percentage {
+    text-align: right;
+    padding-top: 30px;
+    padding-right: 20px;
+}
+
+.programming-language-container .row .labels .percentage span {
+    font-size: 20px;
+    font-family: 'Futura PT';
+}
+
+.programming-language-container .row .labels .language-name,
+.programming-language-container .row .labels .percentage {
+    width: 50%;
+    color: white;
+}
+
+
+.programming-language-container .row .progress-bar {
+    max-height: 62px;
+}
+
+    .programming-language-container .row div:first-of-type,
+    .programming-language-container .row .progress-bar svg {
+        width: 820px;
+    }
+
+/*.programming-language-container .row .progress-bar svg polyline {
+            stroke: white;
+            stroke-width: 1px;
+            opacity: 0.4;
+        }*/
+
+.programming-language-container .row .progress-bar svg polyline:nth-child(2) {
+    filter: drop-shadow(rgb(246, 86, 86) 0px 0px 2px) drop-shadow(rgba(246, 86, 86, 0.6) 0 0 3px) drop-shadow(rgba(246, 86, 86, 0.3) 0 0 5px);
+}
+
+.framework-container {
+    padding-top: 50px;
+    opacity: 0;
+    margin-bottom: 56px;
+    transition: 1s ease-in;
+}
+
+.framework-container.visible {
+    opacity: 1;
+}
+
+.framework-container .flex-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.framework-container .frame-block {
+    width: 300px;
+    display: flex;
+    /*! margin: 0 auto; */
+    justify-content: center;
+    align-items: center;
+}
+
+.framework-container .frame-block .img-box {
+    padding: 25px 0;
+}
+
+.framework-container .frame-block .img-box img {
+    height: 90px;
+    margin: 0 auto;
+    display: block;
+}
+
+.framework-container .frame-block .progress-bar svg {
+    width: 170px;
+    display: block;
+    margin: 0 auto;
+}
+
+.framework-container .frame-block .progress-bar svg polyline:nth-of-type(1) {
+    stroke: white;
+    stroke-width: 1px;
+    opacity: 0.4;
+}
+
+.framework-container .frame-block .progress-bar svg polyline:nth-of-type(2) {
+    stroke: red;
+    stroke-width: 14px;
+    stroke-linecap: round;
+    fill: none;
+    filter: drop-shadow(rgb(246, 86, 86) 0px 0px 2px) drop-shadow(rgba(246, 86, 86, 0.6) 0 0 3px) drop-shadow(rgba(246, 86, 86, 0.3) 0 0 5px);
+}
+
+.framework-container .frame-block .label {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Futura PT';
+    font-size: 1.1em;
+}
+
+.framework-container .to-be-learned-separator-text {
+    text-align: center;
+    color: #c8c8c4;
+    font-family: Montserrat;
+    font-size: 0.7em;
+    margin: 60px 0;
+}
+
+.framework-container .to-be-learned-separator-text:after,
+.framework-container .to-be-learned-separator-text:before {
+    background-image: linear-gradient(to right, transparent, #c8c8c4);
+    content: "";
+    height: 1px;
+    width: 100px;
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    vertical-align: middle;
+}
+
+.framework-container .to-be-learned-separator-text:after {
+    transform: rotateY(180deg);
+}
+
+.framework-container .to-be-learned-separator-text br {
+    display: none;
+}
+
+@media only screen and (max-width: 650px) {
+    .skills h2 {
+        font-size: 1.95em;
+        margin-bottom: 0;
+    }
+
+    .software-container {
+        height: 550px;
+    }
+
+    .progress div:first-child {
+        margin-left: 0 !important;
+    }
+
+    .progress .mobile-size-display .description-container {
+        padding: 0 !important;
+        width: 100vw;
+        justify-content: center;
+    }
+
+    .progress .mobile-size-display .description-container .next-neon-btn {
+        display: none;
+    }
+
+    .progress .mobile-size-display .description-container .immobile-box .block {
+        width: 100vw;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .progress .mobile-size-display .description-container .immobile-box .block .subject {
+        font-size: 2.4em;
+    }
+
+    .progress .mobile-size-display .description-container .immobile-box .block .level {
+        font-size: 1.05em;
+    }
+
+    .progress .mobile-size-display .description-container .immobile-box .block p {
+        font-size: .725em;
+    }
+
+    .progress .mobile-size-display .mobile-nav-buttons {
+        display: flex;
+    }
+
+    .progress .mobile-size-display {
+        display: grid !important;
+        justify-items: center !important;
+    }
+
+    .progress .mobile-size-display div:first-child {
+        padding: 0;
+    }
+
+    .progress .mobile-size-display .progress-bar {
+        width: 378px;
+height: 378px;
+    }
+
+    .progress .mobile-size-display .progress-bar circle {
+        r: 140px;
+        /* cy: 189px; */
+    }
+
+
+
+
+    .programming-language-container {
+        margin-left: 0;
+        padding: 100px 10px;
+        margin-bottom: 0;
+    }
+
+    .programming-language-container .list {
+        display: block;
+    }
+
+    .programming-language-container .row {
+        scale: 55%;
+        height: 60px;
+        margin: 0;
+        margin-left: -13% !important;
+    }
+
+    .programming-language-container .row div:first-of-type,
+    .programming-language-container .row .progress-bar svg {
+        width: 100%;
+    }
+
+    .programming-language-container .row .language-name p {
+        font-size: 1em;
+    }
+
+    .programming-language-container .row .percentage {
+        display: flex;
+justify-content: end;
+align-items: end;
+padding-top: 0 !important;
+    }
+
+    .programming-language-container .row .percentage span {
+        font-size: .95em !important;
+        margin-bottom: 5px;
+    }
+
+
+
+    .framework-container {
+        margin: 0;
+    }
+
+    .framework-container .frame-block {
+        scale: 72%;
+        width: 50%
+    }
+
+    .framework-container .frame-block .progress-bar svg polyline:nth-of-type(1) {
+        opacity: 0.9;
+    }
+
+    .framework-container .text-seperator::after,
+.framework-container .text-seperator::before {
+    content: "";
+background-image: linear-gradient(to right, transparent, #c8c8c4);
+height: 1px;
+width: 100px;
+display: inline-block;
+margin: 0 15px;
+position: absolute;    
+}
+
+.framework-container .text-seperator::before {
+    left: calc(50% - 14px - 55px);
+transform: translateX(-100%) translateY(20px);
+}
+
+.framework-container .text-seperator::after {
+    right: calc(50% - 14px - 252px);
+transform: translateX(-100%) translateY(-79px) rotateY(180deg);
+}
+
+    .framework-container .to-be-learned-separator-text::after,
+    .framework-container .to-be-learned-separator-text::before {
+        content: none;
+    }
+
+    .framework-container .to-be-learned-separator-text br {
+        display: block;
+    }
+}

@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>My Skills</title>
     <link rel="stylesheet" href="src/style.css" />
     <!--<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Zilla+Slab:wght@300;400;500&display=swap"
@@ -183,7 +183,7 @@
                     }
 
                     wrapper.style.width = (wrapper.children.length * 440) + "px";
-                    console.log(wrapper.style.width);
+                    progressBar()
 
                     function softwareBlock(el) {
                         return `
@@ -267,7 +267,7 @@
         const skills = {
             "Basic": "calc(80px * 1131 / 100)",
             "Intermediate": "calc(60px * 1131 / 100)",
-            "Average": "calc(40px * 1131 / 100)",
+            "Proficient": "calc(40px * 1131 / 100)",
             "Advanced": "calc(20px * 1131 / 100)",
             "Expert": "calc(0px * 1131 / 100)"
         };
@@ -287,7 +287,7 @@
 
 
         /*0 - 226 - 452 - 679 - 905 - 1131
-          Basic - Intermediate - Average - Advanced - Expert*/
+          Basic - Intermediate - Proficient - Advanced - Expert*/
 
         /*for(let i in blocks) {
             console.log(blocks[i]);

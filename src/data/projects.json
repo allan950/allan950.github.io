@@ -1,0 +1,20 @@
+{
+    "projects": [
+        {
+            "id": 2,
+            "name": "Anime Store",
+            "main_image": "000001.png",
+            "images": ["000001a.png", "000001b.png", "000001c.png"],
+            "techno": [ "symfony", "twig", "javascript", "scss"],
+            "description": "One of my first ecommerce projects built in the context of the final exam of my Fullstack certification program. It uses Symfony technology and comes with Twig templates for the front end. It is composed of a back office for data management and a payment system integrated with Stripe"
+        },
+        {
+            "id": 3,
+            "name": "Mugiwara",
+            "main_image": "000002.png",
+            "images": ["000002a.png"],
+            "techno": [ "reactjs", "scss", "nodejs", "mongodb" ],
+            "description": "Considering my passion for Japanese anime, it was an evidence for me to construct an application related to that universe. So far the applicantion is single-page, and built with React.js and Node.js for data retrieval from a Mongo database. The application is a simple carousel presenting informations (some are fictional) about characters from notorious Eiichirō Oda's masterpiece 'One Piece'. The design idea came from Adi Bivaga's work which can be observed in the following link : <a href='https://dribbble.com/shots/16164950-Demon-Slayer-Character-Profile-Web-Design' target='_blank'>https://dribbble.com/shots/16164950-Demon-Slayer-Character-Profile-Web-Design</a>"
+        }
+    ]
+}

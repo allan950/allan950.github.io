@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>My Work</title>
     <link rel="stylesheet" href="src/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
@@ -36,7 +36,7 @@
         <div class="gallery">
             <div class="options">
                 <div class="display">
-                    <div class="section" data-project-type="web" disable>
+                    <div class="section" data-project-type="web">
                         <div>
                             <div>
                                 <h3>web development</h3>
@@ -44,13 +44,11 @@
                             <div class="preview">
                                 <div>
                                     <div class="item">
-                                        <div class="empty">
-                                            <b>?</b>
-                                        </div>
+                                        <img src="./src/img/projects/000002.png" />
                                     </div>
                                     <div class="item">
                                         <div class="empty">
-                                            <b>?</b>
+                                            <img src="./src/img/projects/000001.png" />
                                         </div>
                                     </div>
                                     <div class="item">
@@ -97,6 +95,7 @@
                                             technology such as Photoshop and Illustrator</p>
                                     </div>
                                     <div class="project-count">
+                                        <em>Number of Projects : 5</em>
                                     </div>
                                 </div>
                             </div>
@@ -284,6 +283,58 @@
                     </div>
                 </section>
             </article>
+
+            <article id="web-project-window">
+                <div class="breadcrumb">
+                    <ul>
+                        <li class="first-menu-option"
+                            onclick="$('.gallery .options').css('display', 'block'); $('#web-project-window').css('display', 'none');">
+                            portfolio</li>
+                        <li class="current">web development</li>
+                    </ul>
+                </div>
+                <div class="list">
+                </div>
+            </article>
+
+            <article id="web-project-details-window">
+                <div class="breadcrumb">
+                    <ul>
+                        <li class="first-menu-option"
+                            onclick="$('.gallery .options').css('display', 'block'); $('#web-project-window').css('display', 'none');">
+                            portfolio</li>
+                        <li
+                            onclick="$('#web-project-window').css('display', 'block'); $('#web-project-details-window').css('display', 'none');">
+                            web development</li>
+                        <li class="current"></li>
+                    </ul>
+                </div>
+                <section>
+                    <div class="img-carousel">
+                        <div>
+                            <img src="./src/img/projects/000001.png" alt="">
+                            <!-- <div></div> -->
+                        </div>
+                        <div>
+                            <img src="./src/img/projects/000001.png" alt="">
+                            <img src="./src/img/projects/000001.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <h3>Portfolio</h3>
+                    </div>
+
+                    <div class="techno-list">
+                        <ul>
+
+                        </ul>
+                    </div>
+
+                    <p class="description"></p>
+
+                </section>
+            </article>
+
             <div class="img-view-backdrop">
                 <div class="body">
                     <div class="img-container">
@@ -322,23 +373,45 @@
 
         let section = document.querySelectorAll(".gallery .section");
         const graphObjs = document.querySelectorAll("#graphic-project-window section").length;
-        let val = 0;
-        let arr = [];
-        for (tag of section) {
-            arr[val] = { tag };
-            if (arr[val].tag.getAttribute("data-project-type") == "graphic") {
-                arr[val].elements = graphObjs;
-            }
+        
+        function initializeProjectView(projectType) {
+                let projectTypeEl = document.querySelector("[data-project-type='"+projectType+"']");
+                let numOfProjects = document.querySelectorAll("#"+projectType+"-project-window section").length;
 
-            if (arr[val].elements) {
-                console.log(arr[val].tag.querySelector(".project-info"));
-                arr[val].tag.querySelector(".project-count").innerHTML = `<em>Number of Projects : ${arr[val].elements}</em>`;
-            }
-
-            val += 1;
+                if (numOfProjects > 0) {
+                    console.log(projectTypeEl.querySelector(".project-info"));
+                    projectTypeEl.querySelector(".project-count").innerHTML = `<em>Number of Projects : ${numOfProjects}</em>`;
+                } else {
+                    projectTypeEl.querySelector(".project-count").innerHTML = '<div class="absolute"><i>No project available at the moment</i></div>';
+                }
         }
 
-        console.log(arr);
+        /*
+        let val = 0;
+            let arr = [];
+            for (tag of section) {
+                arr[val] = { tag };
+
+                let projectType = arr[val].tag.getAttribute("data-project-type");
+                let numOfProjects = document.querySelectorAll("#"+projectType+"-project-window section").length;
+
+                if (arr[val].tag.getAttribute("data-project-type") == "graphic") {
+                    arr[val].elements = graphObjs;
+                }
+                console.log(numOfProjects);
+                if (arr[val].elements) {
+                    console.log(arr[val].tag.querySelector(".project-info"));
+                    arr[val].tag.querySelector(".project-count").innerHTML = `<em>Number of Projects : ${arr[val].elements}</em>`;
+                }
+
+                val += 1;
+            }
+        */
+
+        //initializeProjectView();
+
+        //<div class="absolute"><i>No project available at the moment</i></div>
+
 
     </script>
 
@@ -354,6 +427,146 @@
 
     <script src="./src/js/footer.js"></script>
     <script src="./src/js/navbar.js"></script>
+
+    <script>
+        var projectList, frameworks, languages, software;
+
+        function readTextFile(file, callback) {
+                    var rawFile = new XMLHttpRequest();
+                    rawFile.overrideMimeType("application/json");
+                    rawFile.open("GET", file, true);
+                    rawFile.onreadystatechange = function () {
+                        if (rawFile.readyState === 4 && rawFile.status == "200") {
+                            callback(rawFile.responseText);
+                        }
+                    }
+                    rawFile.send(null);
+                }
+
+        readTextFile("src/data/projects.json", function(data) {
+            var projects = JSON.parse(data);
+            projects = projectList = projects.projects;
+
+            const list = document.querySelector('#web-project-window .list');
+
+            projects.map(function(p) { list.innerHTML += createTemplate(p); });
+
+            initializeProjectView("web");
+        });
+
+        readTextFile("src/data/frameworks.json", function(data) {
+            frameworks = JSON.parse(data);
+        });
+
+        readTextFile("src/data/languages.json", function(data) {
+            let obj = JSON.parse(data);
+            languages = obj.list;
+            console.log(languages);
+        });
+
+        readTextFile("src/data/software.json", function(data) {
+            let obj = JSON.parse(data);
+            software = obj.list;
+            console.log(software);
+        });
+
+
+
+        function createTemplate(data) {
+            var load = JSON.stringify(data);
+            return `
+                <section class="item" data-id="${data.id}">
+                            <div style="">
+                                <img src="./src/img/projects/${data.main_image ?? "steeven_portfolio.png"}" alt="">
+                            </div>
+                            <p>${data.name}</p>
+                        </section>
+            `;
+        }
+
+        $(document).ready(function() {
+            $(document).on('click', '#web-project-window .list .item', function() {
+                $('#web-project-window').css('display','none');
+
+                $dataId = $(this).attr('data-id');
+
+                var currentProject = projectList.find(function(p) { return p.id == $dataId });
+
+                $detailsWin = $('#web-project-details-window');
+
+                //console.log(JSON.stringify($data));
+
+                /// Spread data to details page elements
+                $detailsWin.find('h3').html(currentProject.name);
+                $detailsWin.find('.breadcrumb .current').html(currentProject.name);
+                $detailsWin.find('p.description').html(currentProject.description);
+                $list = $detailsWin.find('.techno-list ul');
+                var techno = '';
+                var images = '';
+
+                currentProject.techno.map(function(t) {
+                    let img = '';
+                    if (frameworks.find(function(f) { return f.name == t; })) {
+                        img = frameworks.find(function(f) { return f.name == t; });
+                    } else if (languages.find(function(l) { return l.name == t; })) {
+                        img = languages.find(function(l) { return l.name == t; });
+                    } else if (software.find(function(s) { return s.name == t; })) {
+                        img = software.find(function(s) { return s.name == t; });
+                    } else {
+                        console.log(t);
+                        switch (t) {
+                            case "scss":
+                                img = {image:"icons/languages/scss.svg"};
+                                break;
+                            case "twig":
+                                img = {image:"icons/twig.svg"};
+                                break;
+                        }
+                    }
+                    //console.log(frmwk);
+                    techno += '<li><img src="src/'+(img ? img.image : "")+'" ><p>'+t+'</p></li>'; 
+                });
+                currentProject.images.map(function(img, ind) { 
+                    if (ind === 0) {
+                        images += '<div><img src="src/img/projects/'+img+'" /></div>';
+                    } else if (ind === 1) {
+                        images += '<div><img src="src/img/projects/'+img+'" />';
+                    } else if (ind === 2) {
+                        images += '<img src="src/img/projects/'+img+'" /></div>'
+                    }
+                 });
+
+                 $detailsWin.find('.img-carousel').html(images);
+
+                $list.html(techno);
+                goBackToTop();
+                $('#web-project-details-window').css('display','block');
+
+
+            });
+        });
+
+        function goBackToTop() {
+            document.documentElement.scrollTop = 0;
+        }
+
+        /* const themeColors = ["green", "red", "blue", "purple", "yellow"];
+        let currentIndex = 0;
+
+        setInterval(function() {
+            if (currentIndex < 4) {
+                currentIndex += 1;
+            } else {
+                currentIndex = 0;
+            }
+            
+            if (themeColors[currentIndex]) {
+                document.querySelectorAll('[data-neon-style]').forEach(function(el) {
+                    el.setAttribute('data-neon-style', themeColors[currentIndex]);
+                });
+            }
+        }, 3000); */
+    </script>
 
 </body>
 

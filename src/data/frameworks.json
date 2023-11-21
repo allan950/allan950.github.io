@@ -6,13 +6,13 @@
     },
     {
         "name": "jquery",
-        "percentage": 50,
+        "percentage": 65,
         "image": "icons/frameworks/jquery.png"
     },
     {
         "name": "meteorjs",
         "percentage": 15,
-        "image": "icons/frameworks/meteor.svg"
+        "image": "icons/frameworks/meteor.png"
     },
     {
         "name": "nodejs",
@@ -31,12 +31,12 @@
     },
     {
         "name": "bootstrap",
-        "percentage": 40,
+        "percentage": 50,
         "image": "icons/frameworks/Bootstrap_logo.svg.png"
     },
     {
         "name": "vuejs",
-        "percentage": 30,
+        "percentage": 60,
         "image": "icons/frameworks/Vue.js_Logo_2.svg.png"
     },
     {
@@ -56,7 +56,7 @@
     },
     {
         "name": "flutter",
-        "percentage": 25,
+        "percentage": 35,
         "image": "icons/frameworks/Google-flutter-logo.png"
     },
     {
@@ -67,12 +67,12 @@
     {
         "name": "tailwind css",
         "percentage": 20,
-        "image": "icons/frameworks/tailwind_css_logo.svg"
+        "image": "icons/frameworks/tailwind.png"
     },
     {
         "name": "svelte.js",
         "percentage": 0,
-        "image": "icons/frameworks/Svelte_Logo.svg"
+        "image": "icons/frameworks/svelte_logo.png"
     },
     {
         "name": "flowbite",

@@ -2,15 +2,18 @@
     "list": [
         {
             "name": "html",
-            "percent": 90
+            "percent": 90,
+            "image": "icons/languages/html.png"
         },
         {
             "name": "css / scss",
-            "percent": 90
+            "percent": 90,
+            "image": "icons/languages/css.png"
         },
         {
             "name": "javascript",
-            "percent": 75
+            "percent": 80,
+            "image": "icons/languages/javascript.png"
         },
         {
             "name": "c# / c++",
@@ -26,7 +29,7 @@
         },
         {
             "name": "php",
-            "percent": 40
+            "percent": 55
         },
         {
             "name": "sql",

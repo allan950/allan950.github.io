@@ -2,21 +2,21 @@
     "list": [
         {
             "name": "illustrator",
-            "level": "average",
+            "level": "proficient",
             "percent": "",
             "description": "Master a fair part of Illustrator features and having designed the most of my promotional materials with the tool.",
             "img": "ai.png"
         },
         {
             "name": "photoshop",
-            "level": "average",
+            "level": "proficient",
             "percent": "",
             "description": "Developed skills using various of the tools offered by Photoshop and honed up my ability for image refinement and graphic visuals.",
             "img": "ps.png"
         },
         {
             "name": "MySQL Workbench",
-            "level": "average",
+            "level": "proficient",
             "percent": "",
             "description": "Worked my way around the basics of MYSQL databases and have the ability to manipulate data and alter, create or drop tables and using sql commands.",
             "img": "mysql.png"
@@ -30,7 +30,7 @@
         },
         {
             "name": "github",
-            "level": "average",
+            "level": "proficient",
             "percent": "",
             "description": "This version control tool does not hold many secrets from me. Pulls, pushes and commits are practices part of my projects development routine. On top of that, I have practiced CI method using GitHub Actions. ",
             "img": "github.png"
@@ -44,7 +44,7 @@
         },
         {
             "name": "android studio",
-            "level": "average",
+            "level": "proficient",
             "percent": "",
             "description": "Having built few apps for coursework in Java and one app soon to be in production with Flutter, Android Studio is my ideal sidekick when working on mobile projects.",
             "img": "android-studio.png"
@@ -62,6 +62,21 @@
             "percent": "",
             "description": "Core concepts of cloud computing have been assimilated and practical use of common services such as EC2 and S3 justifies my certification as a \"Cloud Practitioner\"",
             "img": "aws.png"
+        },
+        {
+            "name": "Docker",
+            "level": "basic",
+            "percent": "",
+            "description": "Principles behind containerized applications and commands to build images and run containers are mastered",
+            "img": "docker.png"
+        },
+        {
+            "name": "mongodb",
+            "level": "intermediate",
+            "percent": "",
+            "description": "Mongo taught me the concepts of NoSQL. It was useful for a couple of projects that did not have complex data structures",
+            "img": "mongo.png",
+            "image": "icons/software/mongodb-original.png"
         }
     ]
 }
