@@ -398,7 +398,10 @@ height: 378px;
         /* cy: 189px; */
     }
 
-
+    .software-container .progress svg.progress-bar circle:nth-child(2),
+    .software-container .progress svg.progress-bar circle:nth-child(3) {
+        stroke-dasharray: 880;
+    }
 
 
     .programming-language-container {
@@ -482,5 +485,23 @@ transform: translateX(-100%) translateY(-79px) rotateY(180deg);
 
     .framework-container .to-be-learned-separator-text br {
         display: block;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .software-container, .software-container .progress {
+        height: auto;
+    }
+
+    .software-container .mobile-size-display {
+        flex-wrap: wrap;
+    }
+
+    .software-container .mobile-size-display > div {
+        margin-bottom: 2em;
+    }
+
+    .software-container .progress .progress-neon-img {
+        width: 430px;
     }
 }

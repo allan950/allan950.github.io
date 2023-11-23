@@ -264,12 +264,18 @@
         let blocks = document.querySelectorAll(".immobile-box .block");
         let blockElmt = blocks[currentValue - 1];
 
+        let strokeDashArray = 1131;
+
+        if (document.documentElement.offsetWidth <= 360) {
+            strokeDashArray = 880;
+        }
+
         const skills = {
-            "Basic": "calc(80px * 1131 / 100)",
-            "Intermediate": "calc(60px * 1131 / 100)",
-            "Proficient": "calc(40px * 1131 / 100)",
-            "Advanced": "calc(20px * 1131 / 100)",
-            "Expert": "calc(0px * 1131 / 100)"
+            "Basic": "calc(80px * "+strokeDashArray+" / 100)",
+            "Intermediate": "calc(60px * "+strokeDashArray+" / 100)",
+            "Proficient": "calc(40px * "+strokeDashArray+" / 100)",
+            "Advanced": "calc(20px * "+strokeDashArray+" / 100)",
+            "Expert": "calc(0px * "+strokeDashArray+" / 100)"
         };
 
         const currentSkill = skills[blockElmt.getAttribute('data-skill-level')];

@@ -331,15 +331,15 @@
 }
 
 .about .third-container .block:nth-of-type(1) .container .icon {
-    background-image: url('icons/mobile-development(1).png');
+    background-image: url('/src/icons/mobile-development\(1\).png');
 }
 
 .about .third-container .block:nth-of-type(2) .container .icon {
-    background-image: url('icons/coding(1).png');
+    background-image: url('/src/icons/coding(1).png');
 }
 
 .about .third-container .block:nth-of-type(3) .container .icon {
-    background-image: url('icons/web-design(1).png');
+    background-image: url('/src/icons/web-design(1).png');
 }
 
 .about .fourth-container {
@@ -756,6 +756,7 @@ padding: 0 24px;
         font-size: .9em;
         margin-left: 0;
         text-align: center;
+        position: relative;
     }
 
     .about .second-container .quoted-paragraph::before {
@@ -764,7 +765,8 @@ padding: 0 24px;
 
     .about .second-container .quoted-paragraph::after {
         /* transform: translate(38px, 20px); */
-        right: 186px;
+        right: 0;
+        transform: translate(0px, 25px);
     }
 
     .about .second-container .content .image {
