@@ -6,6 +6,36 @@
     )
 </script>
 
+<style>
+    #site_logo {
+        transition: .3s filter, .45s scale;
+    }
+
+    a:hover #site_logo {
+        scale: 1.05;
+    }
+
+    nav .nav-header[data-neon-style="blue"] a:hover #site_logo {
+        filter: drop-shadow(#2fb5b5 0 0 5px);
+    }
+
+    nav .nav-header[data-neon-style="red"] a:hover #site_logo {
+        filter: drop-shadow(red 0 0 4px);
+    }
+
+    nav .nav-header[data-neon-style="yellow"] a:hover #site_logo {
+        filter: drop-shadow(#e4c023 0 0 5px);
+    }
+
+    nav .nav-header[data-neon-style="purple"] a:hover #site_logo {
+        filter: drop-shadow(#6b18bd 0 0 5px);
+    }
+
+    nav .nav-header[data-neon-style="green"] a:hover #site_logo {
+        filter: drop-shadow(#104f10 0 0 5px);
+    }
+</style>
+
 
 <nav id="neon-navbar">
     <div class="flexbox">
@@ -15,90 +45,7 @@
             <div class="menu-item logo">
                 <div class="background">
                     <a href="index.html">
-                        <div class="three-dimensional-neon-structure">
-                            <div class="three-dimensional-effect">
-                                <div class="outer-border">
-                                    <div class="pillar top">
-                                        <div class="face" data-neon-style="blue" style="height: 700px;transform: translate3d(39px,-353px,0) rotateX(90deg) rotateZ(90deg);"></div>
-                                        <div class="face" data-neon-style="blue" style="transform: translate3d(39px,-470px,0) rotateX(90deg) rotateZ(90deg);"></div>
-                                        <div class="face" data-neon-style="blue" style="width: 68px;transform: translate3d(40px,-437px,35px) rotateX(90deg) rotateZ(90deg) rotateY(90deg);"></div>
-                                        <div class="face" data-neon-style="blue" style="width: 68px;transform: translate3d(40px,-437px,-35px) rotateX(90deg) rotateZ(90deg) rotateY(90deg);"></div>
-                                    </div>
-                                    <div class="pillar left">
-                                        <div class="face" data-neon-style="blue" style="height: 674px;transform: translate3d(57px,-440px,0) rotateX(90deg) rotateZ(90deg);"></div>
-                                        <div class="face" data-neon-style="blue" style="transform: translate3d(39px,-470px,0) rotateX(90deg) rotateZ(90deg);"></div>
-                                        <div class="face" data-neon-style="blue" style="width: 68px;transform: translate3d(40px,-437px,35px) rotateX(90deg) rotateZ(90deg) rotateY(90deg);"></div>
-                                        <div class="face" data-neon-style="blue" style="width: 68px;transform: translate3d(40px,-437px,-35px) rotateX(90deg) rotateZ(90deg) rotateY(90deg);"></div>
-                                    </div>
-                                    <div class="pillar right">
-                                        <div class="face" data-neon-style="blue" style="height: 674px;transform: translate3d(17px,-440px,0) rotateX(90deg) rotateZ(90deg);"></div>
-                                        <div class="face" data-neon-style="blue" style="transform: translate3d(39px,-470px,0) rotateX(90deg) rotateZ(90deg);"></div>
-                                        <div class="face" data-neon-style="blue" style="width: 68px;transform: translate3d(40px,-437px,35px) rotateX(90deg) rotateZ(90deg) rotateY(90deg);"></div>
-                                        <div class="face" data-neon-style="blue" style="width: 68px;transform: translate3d(40px,-437px,-35px) rotateX(90deg) rotateZ(90deg) rotateY(90deg);"></div>
-                                    </div>
-                                    <div class="pillar bottom">
-                                        <div class="face" style="transform: translate3d(39px,-402px,0) rotateX(90deg) rotateZ(90deg);"></div>
-                                        <div class="face" style="height: 700px;transform: translate3d(39px,-421px,0) rotateX(90deg) rotateZ(90deg);"></div>
-                                        <div class="face" style="width: 68px;transform: translate3d(40px,-437px,35px) rotateX(90deg) rotateZ(90deg) rotateY(90deg);"></div>
-                                        <div class="face" style="width: 68px;transform: translate3d(40px,-437px,-35px) rotateX(90deg) rotateZ(90deg) rotateY(90deg);"></div>
-                                    </div>
-                                </div>
-                                <div class="letter-a" style="/*! position: absolute; */transform-style: preserve-3d;">
-                                    <div class="pillar straight">
-                                        <div class="face"></div>
-                                        <div class="face" style="transform: rotateY(90deg) translateX(35px) translateZ(35px);"></div>
-                                        <div class="face" style="transform: rotateY(90deg) translateX(35px) translateZ(-35px);"></div>
-                                        <div class="face" style="transform: translateZ(-70px);"></div>
-                                        <div class="face top" style="transform: rotateX(90deg) translate3d(0px,-35px,35px);"></div>
-                                        <div class="face bottom" style="transform: rotateX(90deg) translate3d(0px,-35px,-265px);"></div>
-                                    </div>
-                                    <div class="pillar tilted">
-                                        <div class="face"></div>
-                                        <div class="face" style="transform: rotateY(90deg) translateX(35px) translateZ(35px);"></div>
-                                        <div class="face" style="transform: rotateY(90deg) translateX(35px) translateZ(-35px);"></div>
-                                        <div class="face" style="transform: translateZ(-70px);"></div>
-                                        <div class="face top" style="transform: rotateX(90deg) translate3d(0px,-35px,35px);"></div>
-                                        <div class="face bottom" style="transform: rotateX(90deg) translate3d(0px,-35px,-265px);"></div>
-                                    </div>
-                                    <!--<div style="height: 330px;width: 70px;background-color: sienna;position: absolute;/*! transform: rotateY(90deg) rotateX(-28deg) translateX(35px) translateZ(-105px) translateY(35px) translate3d(); */transform: translate3d(-156px, -45px, -35px) rotateY(90deg) rotateX(-40deg);"></div>
-                                    <div style="height: 70px;width: 70px;background-color: palegoldenrod;position: absolute;transform: rotateY(90deg) rotateX(-28deg) translateX(35px) translateZ(-105px) translateY(35px) translate3d();transform: translate3d(-215px, 235px, -35px) rotateY(90deg) rotateX(40deg);"></div>
-                                    <div style="height: 290px;width: 70px;background-color: silver;position: absolute;transform: rotateY(90deg) rotateX(-28deg) translateX(35px) translateZ(-105px) translateY(35px) translate3d();transform: translate3d(-100px, 45px, -35px) rotateY(90deg) rotateX(-40deg);"></div>
-                                                            <div style="transform: translateX(0px) rotateZ(40deg);transform-style: preserve-3d;">
-                                                                <div style="height: 300px;width: 70px;background-color: cyan;position: absolute;"></div>
-                                                                <div style="height: 300px;width: 70px;background-color: red;position: absolute;transform: rotateY(90deg) translateX(35px) translateZ(35px);"></div>
-                                                                <div style="height: 300px;width: 70px;background-color: yellow;position: absolute;transform: rotateY(90deg) translateX(35px) translateZ(-35px);"></div>
-                                                                <div style="height: 300px;width: 70px;background-color: green;position: absolute;transform: translateZ(-70px);"></div>
-                                                            </div>-->
-                                    <div></div>
-                                </div>
-                                <div class="letter-k">
-                                    <div class="pillar straight">
-                                        <div class="face"></div>
-                                        <div class="face" style="transform: rotateY(90deg) translateX(35px) translateZ(35px);"></div>
-                                        <div class="face" style="transform: rotateY(90deg) translateX(35px) translateZ(-35px);"></div>
-                                        <div class="face" style="transform: translateZ(-70px);"></div>
-                                        <div class="face top" style="transform: rotateX(90deg) translate3d(0px,-35px,35px);"></div>
-                                        <div class="face bottom" style="transform: rotateX(90deg) translate3d(0px,-35px,-265px);"></div>
-                                    </div>
-                                    <div class="pillar up">
-                                        <div class="face"></div>
-                                        <div class="face" style="transform: rotateY(90deg) translateX(35px) translateZ(35px);"></div>
-                                        <div class="face" style="transform: rotateY(90deg) translateX(35px) translateZ(-35px);"></div>
-                                        <div class="face" style="transform: translateZ(-70px);"></div>
-                                        <div class="face top" style="transform: rotateX(90deg) translate3d(0px,-35px,35px);"></div>
-                                        <div class="face bottom" style="transform: rotateX(90deg) translate3d(0px,-35px,-161px);"></div>
-                                    </div>
-                                    <div class="pillar down">
-                                        <div class="face"></div>
-                                        <div class="face" style="transform: rotateY(90deg) translateX(35px) translateZ(35px);"></div>
-                                        <div class="face" style="transform: rotateY(90deg) translateX(35px) translateZ(-35px);"></div>
-                                        <div class="face" style="transform: translateZ(-70px);"></div>
-                                        <div class="face top" style="transform: rotateX(90deg) translate3d(0px,-35px,35px);"></div>
-                                        <div class="face bottom" style="transform: rotateX(90deg) translate3d(0px,-35px,-122px);"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="site_logo"></div>
                     </a>
                 </div>
             </div>
@@ -107,3 +54,7 @@
         </div>
     </div>
 </nav>
+
+<script>
+        $('#site_logo').load('src/components/3d-logo.html');
+    </script>

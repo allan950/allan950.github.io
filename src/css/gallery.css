@@ -215,6 +215,7 @@
 
 .gallery .options .section[data-project-type="graphic"] .preview .item {
     border-radius: 8px;
+    background-color: #191d19;
 }
 
 .gallery .options .section[data-project-type="graphic"] .preview .item:first-of-type,
@@ -225,13 +226,11 @@
 .gallery .options .section[data-project-type="graphic"] .preview .item:first-of-type {
     transform: rotateZ(-23deg);
     margin-right: -11px;
-    background-color: antiquewhite;
 }
 
 .gallery .options .section[data-project-type="graphic"] .preview .item:last-of-type {
     transform: rotateZ(23deg);
     margin-left: -11px;
-    background-color: #a97d10;
 }
 
 .gallery .options .section[data-project-type="graphic"] .preview .item:nth-of-type(2) {

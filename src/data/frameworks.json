@@ -78,5 +78,15 @@
         "name": "flowbite",
         "percentage": 0,
         "image": "icons/frameworks/flowbite-logo.png"
+    },
+    {
+        "name": "wechat",
+        "percentage": 70,
+        "image": "icons/frameworks/wechat_miniprogram.png"
+    },
+    {
+        "name": "react native",
+        "percentage": 35,
+        "image": "icons/frameworks/React-icon.svg.png"
     }
 ]

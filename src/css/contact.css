@@ -1,0 +1,45 @@
+header {
+    position: relative;
+}
+
+.grid {
+    display: grid;
+}
+
+.glowing-arrow {
+    position: absolute;
+  width: 100%;
+  bottom: 71px;
+  left: 0;
+}
+
+.glowing-arrow svg {
+    margin: auto;
+  display: block;
+    animation: moving-arrow 2s ease-in-out infinite;
+}
+
+.glowing-arrow polyline {
+    stroke: #e4c023;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    /* box-shadow: blue 0 0 10px; */
+    fill: none;
+    filter: drop-shadow(rgb(233, 205, 80) 0px 0px 5px) drop-shadow(rgb(233, 205, 80) 0px 0px 1px);
+    animation: dynamic-shadow 2s ease-in-out infinite;
+}
+
+@keyframes dynamic-shadow {
+    0% {
+        filter: drop-shadow(rgba(233, 205, 80, 0.8) 0px 0px 5px) drop-shadow(rgba(233, 205, 80, 0.8) 0px 0px 1px);
+    }
+
+    50% {
+        filter: drop-shadow(rgba(233, 205, 80, 0.8) 0px 0px 3px) drop-shadow(rgba(233, 205, 80, 0.8) 0px 0px 1px);
+    }
+
+    100% {
+        filter: drop-shadow(rgba(233, 205, 80, 0.8) 0px 0px 5px) drop-shadow(rgba(233, 205, 80, 0.8) 0px 0px 1px);
+    }
+}
